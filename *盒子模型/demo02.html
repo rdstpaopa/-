@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>盒子模型</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.out{
+			width: 500px;
+			height: 500px;
+			border: 1px solid black;
+		}
+
+		.in{
+			font-size: 12px;
+			/*背景颜色*/
+			background-color: skyblue;
+
+			/*
+				盒子模型由四个矩形区域组成，从内到外依次为  content(内容)、padding(内边距)、border(边框)、margin(外边距)
+			*/
+			/*
+				content
+				width:宽度;
+				height:高度;
+			*/
+			width: 100px;
+			height: 100px;
+
+			/*
+				边框
+				border可以分为 border-width(粗细)、border-style(风格，实线，虚线，双线)、border-color(颜色)
+				还可以分为 border-top(顶部)、border-bottom(底部)、border-left(左边)、border-right(右边)
+
+				还可以细分  border-right-width 	border-right-style   border-right-color
+
+			*/
+			border: 5px dashed red;
+
+			border-width: 10px;
+			border-style: double;
+			border-color: blue;
+
+			border-top: 15px dotted red;
+
+			border-right-width: 20px;
+			border-right-style: groove;
+			border-right-color: orange;
+
+			/*
+				内边距
+				padding可以分为 padding-top padding-right padding-bottom padding-left
+			*/
+			padding: 10px;
+			/*上下10，左右20*/
+			padding: 10px 20px;
+			/*上10，右20，下30，左20*/
+			padding: 10px 20px 30px;
+			padding: 10px 20px 30px 40px;
+
+			padding-top: 50px;
+
+			/*
+				外边距
+				margin可以分为 margin-top margin-right margin-bottom margin-left
+
+				使用方法跟 padding相同
+			*/
+			margin: 10px;
+			/*上下为10，左右为auto*/
+			margin: 10px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="out">
+		<div class="in">
+			盒子模型由四个矩形区域组成，从内到外依次为  content(内容)、padding(内边距)、border(边
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>盒子模型</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.out{
+			/*宽高*/
+			width: 400px;
+			height: 400px;
+			background-color: pink;
+			border: 1px solid black;
+		}
+
+		.in{
+			/*背景颜色*/
+			background-color: lightgreen;
+
+			/*
+				盒子模型是布局中的最小单位，包含四个矩形区域，从内到外分别是 content(内容),padding(内边距),border(边框),margin(外边距)
+			*/
+
+			/*
+				content(内容)
+					width: 宽度;
+					height: 高度;
+			*/
+			width: 200px;
+			height: 200px;
+
+			/*
+				边框（border）
+					包含	border-width(粗细)，border-style(风格，实线，虚线，...)，border-color(颜色)
+
+					按照方向分	border-top,border-right,border-bottom,border-left
+
+					还可以细分用一个方向举例		border-right-width,border-right-style,border-right-color
+
+					边框风格：
+						http://www.w3school.com.cn/cssref/pr_border-style.asp
+
+			*/
+			border: 5px solid yellow;
+			border-top: 10px dashed red;
+
+			border-right-width: 20px;
+			border-right-style: dotted;
+			border-right-color: purple;
+
+
+			/*
+				内边距(padding)
+
+					从顶部开始顺时针设置样式
+					按照方向可以分为 padding-top,padding-right,padding-bottom,padding-left
+			*/
+			/*同时设置四个方向*/
+			padding: 10px;
+			/*上下为10px,左右为20px*/
+			padding: 10px 20px;
+			/*上为10px,右左为20px,下为30px*/
+			padding: 10px 20px 30px;
+			/*上为10px,右为20px,下为30px,左为40px*/
+			padding: 10px 20px 30px 40px;
+
+			padding-top: 50px;
+
+			/*
+				margin(外边距)
+					使用方法跟padding相同
+			*/
+			margin: 20px;
+			/*左右两边的外边距同时为auto，可以达到水平方向居中*/
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		img{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="out">
+		<div class="in">
+			<img src="http://hiphotos.baidu.com/news/crop%3D23%2C0%2C617%2C414%3Bq%3D80%3B/sign=c5e1ace4d92a6059465fbb5a150607b7/a08b87d6277f9e2f93e65d251130e924b999f3c8.jpg">
+		</div>
+	</div>
+</body>
+</html>

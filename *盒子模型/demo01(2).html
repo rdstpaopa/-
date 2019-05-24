@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>盒子模型</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*使用id选择器*/
+		#d1{
+			width: 260px;
+			height: 260px;
+			/*
+				1px粗细 虚线 黑色
+			*/
+			border: 1px dashed black;
+		}
+
+		#d2{
+			/*背景颜色*/
+			background-color: red;
+			font-size: 14px;
+
+			/*
+				盒子模型 分为四个矩形区域，从内往外分别是 content(内容)、padding(内边距)、border(边框)、margin(外边距)
+			*/
+
+			/*
+				content(内容)
+					width:宽度;
+					height:高度;
+			*/
+			width: 100px;
+			height: 100px;
+
+
+			/*
+				border(边框)
+					分为 border-width(粗细)、border-style(风格，实线，虚线，...)、border-color(颜色)
+
+						border-style: http://www.w3school.com.cn/tiy/t.asp?f=csse_border-style
+					
+					还可以分为 border-top(顶部)、border-right(右边)、border-bottom(底部)、border-left(左边)
+
+					用一个方向举例，还可以细分为：border-left-width、border-left-style、border-left-color
+
+			*/
+			border: 5px solid orange;
+
+			border-right: 10px double black;
+
+			border-left-width: 10px;
+			border-left-style: dotted;
+			border-left-color: black;
+			border-style: blue;
+
+			/*
+				颜色的表示方式：
+					1.使用关键词		eg：red,green,blue,orange,purple,skyblue,pink
+					2.rgb(x,y,z)、  rgba(x,y,z,n)
+						rgba分别表示 红色，绿色，蓝色，透明度
+						xyz取值范围 [0,255],n取值范围 [0,1]
+
+						rgba(0,0,0,1) 			不透明的黑色，
+						rgba(255,255,255,1)		不透明的白色
+
+					3.16进制 注意 以 #开头
+						
+							11
+
+						2	3		1 * 2^0 + 1 * 2^1	
+						10	11		1 * 10^0 + 1 * 10^1
+						16	17		1 * 16^0 + 1 * 16^1
+
+							ff 		15 * 16^0 + 15 * 16^1
+									15 * 1 + 15 * 16
+									15 + 240
+									255
+
+						#489a43	颜色 红色取值为48  8*16^0 + 4*16^1
+									红色取值为9a  10*16^0 + 9*16^1
+									红色取值为43  3*16^0 + 4*16^1
+
+						#ff0066 可以使用缩写 #f06 
+			*/
+
+			background-color: rgba(82,117,148,1);
+
+			/*
+				padding(内边距)
+					可以分为四个方向	padding-top,padding-right,padding-bottom,padding-left
+			*/
+
+			padding: 10px;
+			/*上下 10，左右 20*/
+			padding: 10px 20px;
+			/*上 10，左右 20，下 30*/
+			padding: 10px 20px 30px;
+			/*上10，右20，下30，左40*/
+			padding: 10px 20px 30px 40px;
+
+			/*单独设置一个方向*/
+			padding-top: 50px;
+
+
+			/*
+				margin(外边距)
+					使用方法跟padding相同
+			*/
+			margin: 10px;
+
+
+			/*左右两边外边距同时为auto，可以达到水平居中*/
+			/*margin: 10px auto;*/
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+</head>
+<body>
+	<!-- id表示一个标记的唯一标识，值最多出现1次 -->
+	<div id="d1">
+		<div id="d2">
+			元素框的最内部分是实际的内容，直接包围内容的是内边距。内边距呈现了元
+		</div>
+	</div>
+</body>
+</html>

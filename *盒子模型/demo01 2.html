@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>盒子模型</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*
+			通过id寻找标记  #id值
+		*/
+		#out{
+			width: 500px;
+			height: 500px;
+			border: 1px solid black;
+			background-color: skyblue;
+		}
+
+
+		#in{
+			/*背景颜色	填充的区域为 边框区域 + 内边距区域 + 内容区域*/
+			background-color: red;
+
+			/*
+				盒模型在页面中布局的最小单位，每一个盒模型包含四个矩形区域，从内到外依次为 content(内容)、padding(内边距)、border(边框)、margin(外边距)
+
+			*/
+
+			/*
+				content(内容)
+					width: 宽度;
+					height: 高度;
+			*/
+			width: 200px;
+			height: 200px;
+
+
+			/*
+				border(边框)
+					分为 border-width(粗细)、border-style(风格，实线，虚线，点线，...)、border-color(颜色)
+					还可以分为 border-top(顶部)、border-right(右边)、border-bottom(底部)、left(左边)
+
+					使用一个方向举例，还可以细分 border-bottom-width、border-bottom-style、border-bottom-color
+			*/
+			border: 5px solid blue;
+
+			border-right: 10px dashed orange;
+
+			border-bottom-width: 20px;
+			border-bottom-style: dotted;
+			border-bottom-color: black;
+
+
+			/*
+				padding(内边距)
+					分为 padding-top,padding-right,padding-bottom,padding-left
+			*/
+			/*四个方向都为 10px*/
+			padding: 10px;
+			/*上下为10px,左右为20px*/
+			padding: 10px 20px;
+			/*上10，下为30，左右为20*/
+			padding: 10px 20px 30px;
+			/*上10，右20，下30，左40*/
+			padding: 10px 20px 30px 40px;
+
+			padding-top: 50px;
+
+			/*
+				margin(外边距)
+					使用方法跟内边距一样
+			*/
+			margin: 20px;
+
+			/*水平方向左右两边的外边距同时为auto，可以达到水平居中*/
+			margin: 30px auto;
+
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="out">
+		<div id="in">
+			元素框的最内部分是实际的内容，直接包围内容的是内边距。内边距呈现了元素的背景。内边距的边缘是边框。边框以外是外边距，外边距默认是透明的，因此不会遮挡其后的任何元素。内边距、边框和外边距都是可选的，默认值是零背景应用
+		</div>
+	</div>
+</body>
+</html>
